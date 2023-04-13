@@ -22,7 +22,7 @@ export default new CommandClass({
         }
 
         const msg = await interaction.reply({
-            content: 'Generating...\nPrevious frequency: ' + (oldFrequency ? inlineCode(`${oldFrequency}`) : 'N/A'),
+            content: 'Generating...\nPrevious frequency: ' + (oldFrequency ? spoiler(`${oldFrequency}`) : 'N/A'),
             fetchReply: true
         });
 
