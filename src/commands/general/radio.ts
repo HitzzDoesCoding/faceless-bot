@@ -1,4 +1,4 @@
-import { SlashCommandBuilder, ChatInputCommandInteraction, inlineCode, Message, spoiler } from 'discord.js';
+import { SlashCommandBuilder, ChatInputCommandInteraction, Message, spoiler } from 'discord.js';
 import { CommandClass } from '../../structures/command.js';
 
 export default new CommandClass({
@@ -29,7 +29,7 @@ export default new CommandClass({
         setTimeout(() => {
             const Frequency = (Math.random() * 98 + 1).toFixed(2);
             interaction.editReply({
-                content: `New Frequency Is ${spoiler(`${Frequency}`)}.\nPrevious frequency: ${oldFrequency ? spoiler(`${oldFrequency}`) : 'N/A'}`,
+                content: `New Frequency Is ${spoiler(`${Frequency}`)}\nPrevious frequency: ${oldFrequency ? spoiler(`${oldFrequency}`) : 'N/A'}`,
             });
         }, 3000);
         console.log(msg)
